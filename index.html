@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te amo demais!</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+
+        function mudarPosicao() {
+        // Obtendo uma referência ao botão
+        var botao = document.getElementById('nao');
+        
+        // Obtendo as dimensões da janela do navegador
+        var larguraJanela = window.innerWidth;
+        var alturaJanela = window.innerHeight;
+        
+        // Gerando uma posição aleatória dentro da janela
+        var novaPosicaoX = Math.random() * (larguraJanela - botao.offsetWidth);
+        var novaPosicaoY = Math.random() * (alturaJanela - botao.offsetHeight);
+        
+        // Definindo a nova posição do botão
+        botao.style.position = 'absolute';
+        botao.style.left = novaPosicaoX + 'px';
+        botao.style.top = novaPosicaoY + 'px';
+    }
+    </script>
+
+    <script>
+        // Variável de controle para verificar se o pop-up já foi exibido
+        var popupDisplayed = false;
+
+        // Função para exibir o pop-up
+        function showPopup() {
+            if (!popupDisplayed) {
+                var popup = document.getElementById("popup");
+                popup.style.display = "block";
+                setTimeout(function() {
+                    hidePopup();
+                }, 3000); // Oculta o pop-up após 3 segundos
+                popupDisplayed = true;
+            }
+        }
+
+        // Função para ocultar o pop-up
+        function hidePopup() {
+            var popup = document.getElementById("popup");
+            popup.style.display = "none";
+        }
+    </script>
+</head>
+<body>
+
+    
+
+    <div class="card">
+
+        <h1 class="texto">Quer continuar cmg para sempre?</h1>
+
+        <div class="botoes">
+
+            <a href="declaracao.html" class="btn sim" onmouseover="showPopup()">Sim!</a>
+            
+            <div id="popup" class="popup">Tem certeza?</div>
+
+
+
+            <button class="btn nao" id="nao" onmouseover="mudarPosicao()">Não!</button>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+
+:root{
+
+    --fonte-principal: "Tiny5", sans-serif;
+}
+
+*{
+    font-family: var(--fonte-principal);
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to top, pink, blue) ;
+    background-repeat: no-repeat;
+}
+
+.texto{
+    text-align: center;
+    color: rgb(4, 46, 4);
+    font-size: 4em;
+}
+
+.botoes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+
+
+.btn{
+    background-color: red;
+    padding: 10px;
+    font-size: 60px;
+    font-weight: 600;
+    border-radius: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.nao{
+    background-color: green;
+}
+
+.sim{
+    font-size: 12px;
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+

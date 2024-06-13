@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eu te amo demais!</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <style>
+
+    .slider {
+    
+    width: 700px;
+    height: 500px;
+    margin: 20px auto;
+    position: relative;
+    }
+    .slide1,.slide2,.slide3,.slide4,.slide5 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    }
+    .slide1 {
+        background-image: url("img1.jpg");
+        background-size: cover;
+        animation:fade 8s infinite;
+    -webkit-animation:fade 8s infinite;
+
+    } 
+    .slide2 {
+        background-image: url("img2.jpg");
+        background-size: cover;
+        animation:fade2 8s infinite;
+    -webkit-animation:fade2 8s infinite;
+    }
+    .slide3 {
+        background-image: url("img3.jpg");
+        background-size: cover;
+        animation:fade3 8s infinite;
+    -webkit-animation:fade3 8s infinite;
+    }
+    @keyframes fade
+    {
+    0%   {opacity:1}
+    33.333% { opacity: 0}
+    66.666% { opacity: 0}
+    100% { opacity: 1}
+    }
+    @keyframes fade2
+    {
+    0%   {opacity:0}
+    33.333% { opacity: 1}
+    66.666% { opacity: 0 }
+    100% { opacity: 0}
+    }
+    @keyframes fade3
+    {
+    0%   {opacity:0}
+    33.333% { opacity: 0}
+    66.666% { opacity: 1}
+    100% { opacity: 0}
+    }
+
+    .img{
+        width: 700px;
+        height: 500px;
+    }
+
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .txt{
+        font-size: 30px;
+    }
+    </style>
+
+</head>
+<body>
+
+    <div class='slider'>
+        <div class='slide1'><img class="img" src="img1.jpeg" alt=""></div>
+        <div class='slide2'><img class="img" src="img2.jpeg" alt=""></div>
+        <div class='slide3'><img class="img" src="img3.jpeg" alt=""></div>
+    </div>
+
+    <p class="txt">
+        Obrigado por todos os momentos que você me proporciona. Eu te amo demais!
+    </p>
+    
+    <audio autoplay> <!--agora com autoplay e sem controls-->
+        <source src="George Michael - i Never Gonna Dance Again.mp3.mp3" type="audio/mpeg">
+        
+      </audio>
+</body>
+</html>
